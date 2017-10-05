@@ -1,5 +1,6 @@
 require 'bundler/setup'
 require 'open-uri'
+require 'pry'
 
 
 Bundler.require(:default)
@@ -53,17 +54,6 @@ end
 
 get '/login' do
   erb(:login)
-end
-
-post '/login' do
-  email = params['email']
-  password = params['password']
-  user = User.find_by_email(email)
-  if BCrypt::Password.new(user.password) == password
-    redirect("/user/#{user.id}")
-  else
-    erb(:login)
-  end
 end
 
 get '/user/:id' do
@@ -124,7 +114,7 @@ post '/user/:id' do
 	elsif params['sqft'] != ''
 		combined_search = "sqft > #{params['sqft']}"
 	end
-	@search = Apartment.where(combined_search).order(:price)
+	@search = Apartment.where(combined_search).order(params['sort'])
 	@all = Apartment.all
 	erb(:user)
 end

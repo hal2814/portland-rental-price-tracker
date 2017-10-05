@@ -42,7 +42,7 @@
   <div class="container">
     <form action="/user/<%= @user.id %>" method="post">
      <h1>Search Criteria:</h1>
-     <h3>Important: Leave a input blank if you do not wish to search by those parameters</h3>
+     <h3>Important: Leave an input blank if you do not wish to search by those parameters</h3>
 
      <h4>Bedrooms:</h4>
      <div class='form-group'>
@@ -96,7 +96,23 @@
 
      <label for="sqft">Enter Min Sqare Feet</label>
      <input type="number" name="sqft"><br>
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+    <h4>Sort By:</h4>
+    <div>
+      <input type="radio" name="sort" value="price" checked>
+      <label for="contactChoice1">Price</label>
 
+      <input type="radio" name="sort" value="bed">
+      <label for="contactChoice2">Bed</label>
+
+      <input type="radio" name="sort" value="bath">
+      <label for="contactChoice2">Bath</label>
+
+      <input type="radio" name="sort" value="sqft">
+      <label for="contactChoice2">Sqft</label>
+    </div>
+
+<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
      <button type="submit">Search</button>
     </form>
 
@@ -194,6 +210,9 @@ function toggle3(source) {
    checkboxes[i].checked = source.checked;
  }
 }
+// xxxxxxxxxxxxxxxxxx
+
+// xxxxxxxxxxxxxxxxxx
 </script>
 
 </body>
