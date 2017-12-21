@@ -1,5 +1,8 @@
 Portland Rent Tracker
 =====================
+<div align="center">
+  <img align="center" src="https://raw.githubusercontent.com/hal2814/portland-rental-price-tracker/master/public/img/rentgif.gif">
+</div>
 
 Authors:
 Nate McGregor, Keegan Ruebling, Mark Helt, Dan Danilyuk
