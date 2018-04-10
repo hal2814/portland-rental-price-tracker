@@ -65,7 +65,7 @@ GEM
     rspec-support (3.6.0)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-    sinatra (2.0.0)
+    sinatra (2.0.1)
       mustermann (~> 1.0)
       rack (~> 2.0)
       rack-protection (= 2.0.0)
